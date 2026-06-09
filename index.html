@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Central New York Asset Recovery Solutions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CNYARS | Central New York Asset Recovery Solutions</title>
+
   <style>
     body {
       margin: 0;
@@ -13,53 +14,84 @@
       line-height: 1.6;
     }
 
-    header {
-      background: #0b1f3a;
-      color: white;
-      padding: 28px 20px;
+    .hero-logo {
+      background: linear-gradient(to bottom, #ffffff, #eef4f0);
       text-align: center;
+      padding: 35px 20px 25px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 30px;
-    }
-
-    header p {
-      margin: 8px 0 0;
-      font-size: 18px;
-      color: #d6e6f2;
+    .hero-logo img {
+      display: block;
+      max-width: 100%;
+      width: 520px;
+      margin: 0 auto;
     }
 
     nav {
-      background: white;
-      padding: 14px;
+      background: #0b1f3a;
+      padding: 16px 10px;
       text-align: center;
-      border-bottom: 1px solid #ddd;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.18);
     }
 
     nav a {
-      margin: 0 12px;
-      color: #0b1f3a;
+      color: white;
       text-decoration: none;
       font-weight: bold;
+      margin: 0 18px;
+      letter-spacing: 0.5px;
+      font-size: 15px;
     }
 
-    .hero {
-      padding: 60px 20px;
+    nav a.active {
+      color: #f0c76a;
+      border-bottom: 3px solid #1f7a4d;
+      padding-bottom: 5px;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 38px 32px;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.09);
       text-align: center;
-      background: linear-gradient(to bottom, #ffffff, #eef4f0);
     }
 
-    .hero h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
+    h1 {
+      color: #0b1f3a;
+      font-size: 38px;
+      line-height: 1.15;
+      margin: 0 0 16px;
+      letter-spacing: 0.5px;
     }
 
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto 25px;
-      font-size: 19px;
+    .tagline {
+      font-size: 22px;
+      color: #1f7a4d;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .transparency {
+      background: #eef4f0;
+      border-left: 5px solid #1f7a4d;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 25px auto;
+      max-width: 650px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #0b1f3a;
+    }
+
+    .buttons {
+      margin-top: 28px;
     }
 
     .button {
@@ -67,34 +99,20 @@
       background: #1f7a4d;
       color: white;
       padding: 14px 24px;
-      border-radius: 6px;
+      border-radius: 7px;
       text-decoration: none;
       font-weight: bold;
       margin: 8px;
+      min-width: 190px;
     }
 
-    .button.secondary {
+    .button.gold {
       background: #c89b3c;
       color: #102033;
     }
 
-    section {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 45px 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 28px;
-      border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-      margin-bottom: 24px;
-    }
-
-    h3 {
-      color: #0b1f3a;
-      margin-top: 0;
+    .button.blue {
+      background: #0b1f3a;
     }
 
     footer {
@@ -107,112 +125,80 @@
 
     footer a {
       color: #f0c76a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 700px) {
+      nav a {
+        display: inline-block;
+        margin: 6px 10px;
+      }
+
+      .hero-logo img {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .tagline {
+        font-size: 19px;
+      }
+
+      .button {
+        display: block;
+        margin: 10px auto;
+        width: 85%;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <img src="Screenshot_20260607_200711_ChatGPT.jpg"
-       alt="CNYARS Logo"
-       style="max-width:375px; margin-bottom:15px;">
+  <header class="hero-logo">
+    <img src="cnyars-logo.png" alt="CNYARS Logo">
+  </header>
 
-  
-  <h1>Central New York Asset Recovery Solutions</h1>
-  <p>Helping New Yorkers Recover Unclaimed Funds</p>
-</header>
+  <nav>
+    <a class="active" href="index.html">HOME</a>
+    <a href="received-letter.html">RECEIVED A LETTER?</a>
+    <a href="about.html">ABOUT US</a>
+  </nav>
 
-<nav>
-  <a href="received-letter.html">Received a Letter From Us?</a>
-  <a href="#how">How It Works</a>
-  <a href="about.html">About Us</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <main>
+    <section class="card">
 
-<div class="hero">
-  <h2>Unclaimed Money May Be Waiting for You</h2>
+      <h1>
+        Central New York<br>
+        Asset Recovery Solutions
+      </h1>
 
-<p><strong>Call Us: 315-400-0449</strong></p>
+      <p class="tagline">
+        Helping New Yorkers Recover Unclaimed Funds
+      </p>
 
-<p>
-  We help New York residents identify and recover unclaimed money, funds,
-  property, and assets that may already belong to them.
-</p>
-  
-  <a class="button" <a href="received-letter.html">Received a Letter From Us?</a>
-  <a class="button secondary" href="https://www.osc.ny.gov/unclaimed-funds" target="_blank">Search NYS Database Yourself</a>
-</div>
+      <div class="transparency">
+        No Recovery. No Fee.<br>
+        If funds are recovered, our fee is 15%.
+      </div>
 
-<section id="letter">
-  <div class="card">
-    <h3>Received a Letter From Us?</h3>
-    <p>
-      If you received a letter from Central New York Asset Recovery Solutions,
-      it means we identified a possible unclaimed asset connected to your name
-      through publicly available New York State records.
-    </p>
-    <p>
-      You are never required to use our services. You may search for and claim
-      unclaimed funds directly through New York State at no cost.
-    </p>
-  </div>
-</section>
+      <div class="buttons">
+        <a class="button" href="received-letter.html">Received a Letter?</a>
+        <a class="button blue" href="about.html">About Us</a>
+        <a class="button gold" href="https://www.osc.ny.gov/unclaimed-funds" target="_blank">Search NYS Database</a>
+      </div>
 
-<section id="how">
-  <div class="card">
-    <h3>How It Works</h3>
-    <p><strong>1.</strong> We review public unclaimed funds and property records.</p>
-    <p><strong>2.</strong> We contact individuals who may have money waiting.</p>
-    <p><strong>3.</strong> You choose whether to handle the claim yourself or request assistance.</p>
-    <p><strong>4.</strong> If you request our help, we assist with the recovery process.</p>
-    <p><strong>5.</strong> No recovery, no fee.</p>
-  </div>
-</section>
+    </section>
+  </main>
 
-<section>
-  <div class="card">
-    <h3>Our Transparency Promise</h3>
-    <p>
-      We believe every New Yorker should know they can search for and claim
-      unclaimed funds directly through the appropriate government agency at no cost.
-      Our service is completely optional and is designed for individuals who would
-      prefer assistance navigating the process.
-    </p>
-  </div>
-</section>
-
-<section id="about">
-  <div class="card">
-    <h3>About Us</h3>
-    <p>
-      Central New York Asset Recovery Solutions was founded to help people reconnect
-      with money and assets that are rightfully theirs.
-    </p>
-    <p>
-      Our mission is simple: provide honest, professional, and transparent assistance
-      to New Yorkers who may have unclaimed money waiting to be recovered.
-    </p>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="card">
-    <h3>Contact</h3>
-    <p><strong>Phone:</strong> 315-400-0449</p>
-    <p><strong>Email:</strong> <a href="mailto:info@cnyars.com">info@cnyars.com</a></p>
-    <p><strong>Service Area:</strong> New York State</p>
-  </div>
-</section>
-
-<footer>
-  <p>Central New York Asset Recovery Solutions</p>
-  <p>
-    Search New York State’s official unclaimed funds database for free:
-    <a href="https://www.osc.ny.gov/unclaimed-funds" target="_blank">NYS Unclaimed Funds</a>
-  </p>
-  <p>Not a law firm. No legal advice. No guarantee of recovery.</p>
-</footer>
+  <footer>
+    <p>Central New York Asset Recovery Solutions</p>
+    <p>315-400-0449 | info@cnyars.com</p>
+    <p><a href="#top">Top of Page</a></p>
+  </footer>
 
 </body>
 </html>
