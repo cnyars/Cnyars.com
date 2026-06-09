@@ -14,151 +14,207 @@
       line-height: 1.6;
     }
 
-    header {
-      background: #0b1f3a;
-      color: white;
+    .hero {
+      background: linear-gradient(to bottom, #ffffff, #eef4f0);
       text-align: center;
-      padding: 45px 20px;
+      padding: 35px 20px 25px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 34px;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 18px;
-      color: #d6e6f2;
+    .hero img {
+      display: block;
+      max-width: 100%;
+      width: 650px;
+      margin: 0 auto;
     }
 
     nav {
-      background: white;
-      padding: 14px;
+      background: #0b1f3a;
+      padding: 16px 10px;
       text-align: center;
-      border-bottom: 1px solid #ddd;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.18);
     }
 
     nav a {
-      color: #0b1f3a;
+      color: white;
       text-decoration: none;
       font-weight: bold;
-      margin: 0 12px;
+      margin: 0 18px;
+      letter-spacing: 0.5px;
+      font-size: 15px;
+    }
+
+    nav a.active {
+      color: #f0c76a;
+      border-bottom: 3px solid #1f7a4d;
+      padding-bottom: 5px;
     }
 
     main {
-      max-width: 900px;
+      max-width: 980px;
       margin: 0 auto;
       padding: 45px 20px;
     }
 
     .card {
       background: white;
-      padding: 32px;
-      border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-      margin-bottom: 25px;
+      padding: 34px;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+      margin-bottom: 28px;
     }
 
     h2 {
       color: #0b1f3a;
+      margin-top: 0;
+      font-size: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    h3 {
+      color: #1f7a4d;
+      font-size: 25px;
+      margin-bottom: 0;
+    }
+
+    .subtitle {
+      margin-top: 0;
+      font-style: italic;
+      color: #0b1f3a;
+      font-weight: 500;
+    }
+
+    .founder-layout {
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
     }
 
     .photo-placeholder {
-      width: 220px;
+      min-width: 220px;
       height: 220px;
-      margin: 20px auto;
-      border-radius: 50%;
+      border-radius: 14px;
       background: #dbe4ee;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #666;
+      color: #566;
       font-weight: bold;
       text-align: center;
+    }
+
+    .notice {
+      background: #eef4f0;
+      border-left: 5px solid #1f7a4d;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 22px;
+      font-weight: 600;
     }
 
     footer {
       background: #0b1f3a;
       color: white;
       text-align: center;
-      padding: 28px 20px;
+      padding: 30px 20px;
       font-size: 14px;
     }
 
     footer a {
       color: #f0c76a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 700px) {
+      nav a {
+        display: inline-block;
+        margin: 6px 10px;
+      }
+
+      .hero img {
+        width: 100%;
+      }
+
+      .founder-layout {
+        flex-direction: column;
+      }
+
+      .photo-placeholder {
+        width: 100%;
+        min-width: 0;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>CNYARS</h1>
-  <p>About Central New York Asset Recovery Solutions</p>
-</header>
+  <header class="hero">
+    <img src="about-header.png" alt="About CNYARS">
+  </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="received-letter.html">Received a Letter?</a>
-  <a href="about.html">About Us</a>
-</nav>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="received-letter.html">RECEIVED A LETTER?</a>
+    <a class="active" href="about.html">ABOUT US</a>
+  </nav>
 
-<main>
+  <main>
 
-  <div class="card">
-    <h2>Our Mission</h2>
+    <section class="card">
+      <h2>Our Mission</h2>
 
-    <p>
-      Central New York Asset Recovery Solutions (CNYARS) was created to help individuals recover money and property that already belongs to them.
-    </p>
+      <p>
+        Central New York Asset Recovery Solutions (CNYARS) was created to help individuals recover money and property that already belongs to them.
+      </p>
 
-    <p>
-      Every year, millions of dollars remain unclaimed because people move, change addresses, close accounts, or simply never realize funds are being held in their names.
-    </p>
+      <p>
+        Every year, millions of dollars remain unclaimed because people move, change addresses, close accounts, or simply never realize funds are being held in their names.
+      </p>
 
-    <p>
-      We believe that money belongs in the hands of its rightful owners, not sitting forgotten in government databases.
-    </p>
-  </div>
+      <p>
+        We believe that money belongs in the hands of its rightful owners, not sitting forgotten in government databases.
+      </p>
 
-  <div class="card">
+      <div class="notice">
+        Our services are built around transparency. Every person we contact may pursue their claim directly through New York State at no cost.
+      </div>
+    </section>
 
-    <h2>Meet the Founder</h2>
+    <section class="card">
+      <h2>Meet the Founder</h2>
 
-    <img
-  src="about-header.png"
-  alt="About CNYARS"
-  style="
-    display:block;
-    max-width:100%;
-    width:600px;
-    margin:0 auto 30px auto;
-  ">>
+      <div class="founder-layout">
+        <div class="photo-placeholder">
+          Founder Photo
+        </div>
 
-    <h3>Nicholas James Shaw</h3>
+        <div>
+          <h3>Nicholas James Shaw</h3>
+          <p class="subtitle">Founder &amp; CEO</p>
 
-    <p>
-      Nicholas James Shaw founded Central New York Asset Recovery Solutions with a simple goal: helping people identify and recover funds that rightfully belong to them.
-    </p>
+          <p>
+            Nicholas James Shaw founded Central New York Asset Recovery Solutions with a simple goal: helping people identify and recover funds that rightfully belong to them.
+          </p>
 
-    <p>
-      Nicholas works professionally as a mediator and has spent years helping individuals navigate complex situations, solve problems, and access resources available to them.
-    </p>
+          <p>
+            Nicholas works professionally as a mediator and has spent years helping individuals navigate complex situations, solve problems, and access resources available to them.
+          </p>
 
-    <p>
-      CNYARS was built on the principles of transparency, professionalism, and straightforward communication.
-    </p>
+          <p>
+            CNYARS was built on the principles of transparency, professionalism, and straightforward communication.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  </div>
+  </main>
 
-</main>
-
-<footer>
-  <p>Central New York Asset Recovery Solutions</p>
-  <p><a href="index.html">Return to Home Page</a></p>
-</footer>
+  <footer>
+    <p>Central New York Asset Recovery Solutions</p>
+    <p>315-400-0449 | info@cnyars.com</p>
+    <p><a href="index.html">Return to Home Page</a></p>
+  </footer>
 
 </body>
 </html>
