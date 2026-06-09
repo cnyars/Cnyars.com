@@ -14,159 +14,181 @@
       line-height: 1.6;
     }
 
-    header {
-      background: #0b1f3a;
-      color: white;
+    .hero {
+      background: linear-gradient(to bottom, #ffffff, #eef4f0);
       text-align: center;
-      padding: 45px 20px;
+      padding: 35px 20px 25px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 34px;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 18px;
-      color: #d6e6f2;
+    .hero img {
+      display: block;
+      max-width: 100%;
+      width: 720px;
+      margin: 0 auto;
     }
 
     nav {
-      background: white;
-      padding: 14px;
+      background: #0b1f3a;
+      padding: 16px 10px;
       text-align: center;
-      border-bottom: 1px solid #ddd;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.18);
     }
 
     nav a {
-      color: #0b1f3a;
+      color: white;
       text-decoration: none;
       font-weight: bold;
-      margin: 0 12px;
+      margin: 0 18px;
+      letter-spacing: 0.5px;
+      font-size: 15px;
+    }
+
+    nav a.active {
+      color: #f0c76a;
+      border-bottom: 3px solid #1f7a4d;
+      padding-bottom: 5px;
     }
 
     main {
-      max-width: 900px;
+      max-width: 980px;
       margin: 0 auto;
       padding: 45px 20px;
     }
 
     .card {
       background: white;
-      padding: 32px;
-      border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      padding: 34px;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+      margin-bottom: 28px;
     }
 
     h2 {
       color: #0b1f3a;
-      margin-top: 30px;
+      margin-top: 0;
+      font-size: 30px;
+      letter-spacing: 0.5px;
     }
 
     .notice {
       background: #eef4f0;
       border-left: 5px solid #1f7a4d;
       padding: 18px;
-      border-radius: 6px;
-      margin: 24px 0;
-      font-weight: bold;
+      border-radius: 8px;
+      margin: 22px 0;
+      font-weight: 700;
     }
 
     .button {
       display: inline-block;
-      background: #1f7a4d;
-      color: white;
+      background: #c89b3c;
+      color: #102033;
       padding: 14px 24px;
-      border-radius: 6px;
+      border-radius: 7px;
       text-decoration: none;
       font-weight: bold;
-      margin: 10px 0 20px;
+      margin-top: 12px;
     }
 
     footer {
       background: #0b1f3a;
       color: white;
       text-align: center;
-      padding: 28px 20px;
+      padding: 30px 20px;
       font-size: 14px;
     }
 
     footer a {
       color: #f0c76a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 700px) {
+      nav a {
+        display: inline-block;
+        margin: 6px 10px;
+      }
+
+      .hero img {
+        width: 100%;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Received a Letter From Us?</h1>
-  <p>Central New York Asset Recovery Solutions</p>
-</header>
+  <header class="hero">
+    <img src="received-letter.png" alt="Received a Letter?">
+  </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="received-letter.html">Received a Letter?</a>
-  <a href="mailto:info@cnyars.com">Contact</a>
-</nav>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a class="active" href="received-letter.html">RECEIVED A LETTER?</a>
+    <a href="about.html">ABOUT US</a>
+  </nav>
 
-<main>
-  <div class="card">
+  <main>
 
-    <p>
-      If you received a letter from Central New York Asset Recovery Solutions
-      (CNYARS), you were contacted because publicly available records maintained
-      by the New York State Office of Unclaimed Funds indicate that you may be
-      associated with unclaimed property.
-    </p>
+    <section class="card">
+      <h2>Why You Received a Letter</h2>
 
-    <p>
-      The information included in your letter was obtained from public records
-      maintained by New York State.
-    </p>
+      <p>
+        If you received a letter from Central New York Asset Recovery Solutions
+        (CNYARS), you were contacted because publicly available records maintained
+        by the New York State Office of Unclaimed Funds indicate that you may be
+        associated with unclaimed property.
+      </p>
 
-    <div class="notice">
-      You do not have to use our service. You may pursue your claim directly
-      through New York State at no cost.
-    </div>
+      <p>
+        The information included in your letter was obtained from public records
+        maintained by New York State.
+      </p>
 
-    <h2>How Can I Verify This?</h2>
+      <div class="notice">
+        You do not have to use our service. You may pursue your claim directly
+        through New York State at no cost.
+      </div>
+    </section>
 
-    <p>
-      You may independently search the New York State Office of Unclaimed Funds
-      database using your name.
-    </p>
+    <section class="card">
+      <h2>Verify the Information Yourself</h2>
 
-    <a class="button" href="https://www.osc.ny.gov/unclaimed-funds" target="_blank">
-      Search the Official NYS Database
-    </a>
+      <p>
+        You may independently search the New York State Office of Unclaimed Funds
+        database using your name.
+      </p>
 
-    <h2>What Does CNYARS Charge?</h2>
+      <a class="button" href="https://www.osc.ny.gov/unclaimed-funds" target="_blank">
+        Search NYS Database
+      </a>
+    </section>
 
-    <p>
-      Our fee is 15% of recovered funds, which is the maximum fee permitted
-      under New York law for abandoned property location services.
-    </p>
+    <section class="card">
+      <h2>What Does CNYARS Charge?</h2>
 
-    <p>
-      If no funds are recovered, no fee is owed.
-    </p>
+      <p>
+        Our fee is 15% of recovered funds, which is the maximum fee permitted
+        under New York law for abandoned property location services.
+      </p>
 
-    <h2>Questions?</h2>
+      <p>
+        If no funds are recovered, no fee is owed.
+      </p>
+    </section>
 
-    <p>
-      Call <strong>315-400-0449</strong><br>
-      Email <a href="mailto:info@cnyars.com">Info@CNYARS.com</a>
-    </p>
+  </main>
 
-  </div>
-</main>
-
-<footer>
-  <p>Central New York Asset Recovery Solutions</p>
-  <p><a href="index.html">Return to Home Page</a></p>
-</footer>
+  <footer>
+    <p>Central New York Asset Recovery Solutions</p>
+    <p>315-400-0449 | info@cnyars.com</p>
+    <p><a href="index.html">Return to Home Page</a></p>
+  </footer>
 
 </body>
 </html>
